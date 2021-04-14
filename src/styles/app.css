@@ -156,14 +156,15 @@ header#header .headerContainer .headerNavBox button#menuButton .animatedMenu:aft
 
 header#header .headerContainer .headerTextBox {
   border: solid 2px #fff;
+  font-family: 'Josefin Sans', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: clamp(20rem, 25vw, 40rem);
-  width: clamp(40rem, 70vw, 70rem);
+  height: clamp(20rem, 35vw, 40rem);
+  width: clamp(40rem, 60vw, 70rem);
   padding-left: 2rem;
   padding-right: clamp(1rem, 5vw, 10rem);
   -webkit-transform: translate(clamp(5rem, 5vw, 15rem), clamp(5rem, 10vh, 15rem));
@@ -173,8 +174,7 @@ header#header .headerContainer .headerTextBox {
 header#header .headerContainer .headerTextBox p {
   color: #fff;
   text-transform: uppercase;
-  font-size: clamp(3rem, 8vw, 8rem);
-  font-family: 'Josefin Sans', sans-serif;
+  font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 200;
 }
 
@@ -215,6 +215,7 @@ header#header .headerContainer .headerTextBox p {
     right: 0;
     bottom: 0;
     left: 0;
+    height: 100vh;
     -webkit-transform: translate(100VW);
             transform: translate(100VW);
     -webkit-transition: -webkit-transform .05s ease-in-out;
@@ -290,6 +291,93 @@ header#header .headerContainer .headerTextBox p {
 }
 
 /**/
+#us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  max-width: 192rem;
+  width: 100%;
+  padding: clamp(4rem, 5vw, 8rem);
+  padding-bottom: 20rem;
+  margin: 0 auto;
+}
+
+#us .usBoxOne {
+  width: 60%;
+}
+
+#us .usBoxOne img {
+  width: 100%;
+}
+
+#us .usBoxTwo {
+  background: #fff;
+  width: 50%;
+  padding: 5rem clamp(2rem, 4vw, 8rem);
+  margin-left: -15rem;
+  margin-bottom: -10rem;
+}
+
+#us .usBoxTwo h2 {
+  font-size: clamp(3.5rem, 3vw, 5rem);
+  font-weight: 300;
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+#us .usBoxTwo p {
+  color: #696969;
+  font-size: clamp(1.8rem, 1vw, 3rem);
+  margin-top: 6rem;
+}
+
+@media only screen and (max-width: 900px) {
+  #us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  #us .usBoxOne {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    padding: 2rem 0;
+    margin: 8rem 0 3rem 0;
+  }
+  #us .usBoxOne img {
+    width: clamp(25rem, 90%, 100rem);
+  }
+  #us .usBoxTwo {
+    background: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    width: 100%;
+    padding: clamp(4rem, 5vw, 8rem) 2rem;
+    margin: 2rem auto;
+  }
+  #us .usBoxTwo h2 {
+    font-size: clamp(3.5rem, 5vw, 5rem);
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  #us .usBoxTwo p {
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    margin-top: 8rem;
+  }
+}
+
 /**/
 /**/
 /**/

@@ -152,13 +152,14 @@ header#header {
 
       .headerTextBox {
 
-         border: solid 2px #fff;
+         border     : solid 2px #fff;
+         font-family: 'Josefin Sans', sans-serif;
 
          display    : flex;
          align-items: center;
 
-         height: clamp(20rem, 25vw, 40rem);
-         width : clamp(40rem, 70vw, 70rem);
+         height: clamp(20rem, 35vw, 40rem);
+         width : clamp(40rem, 60vw, 70rem);
 
          padding-left : 2rem;
          padding-right: clamp(1rem, 5vw, 10rem);
@@ -170,8 +171,8 @@ header#header {
             color         : #fff;
             text-transform: uppercase;
 
-            font-size  : clamp(3rem, 8vw, 8rem);
-            font-family: 'Josefin Sans', sans-serif;
+            font-size: clamp(3rem, 8vw, 7rem);
+
             font-weight: 200;
          }
       }
@@ -230,6 +231,8 @@ header#header {
                right   : 0;
                bottom  : 0;
                left    : 0;
+
+               height: 100vh;
 
                transform: translate(100VW);
 
