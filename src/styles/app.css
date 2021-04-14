@@ -26,13 +26,6 @@ header#header {
   background: url(../../public/images/desktop/image-hero.jpg);
   background-size: cover;
   background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   min-height: 60vh;
   height: clamp(60rem, 60vh, 100rem);
   width: 100%;
@@ -46,7 +39,21 @@ header#header .darkOverlay {
   height: 100%;
 }
 
-header#header .headerNavBox {
+header#header .headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 192rem;
+  margin: 0 auto;
+}
+
+header#header .headerContainer .headerNavBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,19 +63,25 @@ header#header .headerNavBox {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 3rem clamp(4rem, 4vw, 6rem);
   position: relative;
-  max-width: 192rem;
-  margin: 0 auto;
+  padding: 3rem clamp(4rem, 4vw, 6rem);
 }
 
-header#header .headerNavBox nav {
+header#header .headerContainer .headerNavBox #logo {
+  z-index: 20;
+}
+
+header#header .headerContainer .headerNavBox #logo img {
+  width: clamp(15rem, 11vw, 40rem);
+}
+
+header#header .headerContainer .headerNavBox nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header#header .headerNavBox nav a div {
+header#header .headerContainer .headerNavBox nav a div {
   border-radius: 5rem;
   height: .3rem;
   width: 0;
@@ -77,26 +90,26 @@ header#header .headerNavBox nav a div {
   transition: width .2s;
 }
 
-header#header .headerNavBox nav a span {
+header#header .headerContainer .headerNavBox nav a span {
   color: #fff;
-  font-size: 1.7rem;
+  font-size: clamp(2rem, 1.5vw, 4rem);
 }
 
-header#header .headerNavBox nav a:hover div {
+header#header .headerContainer .headerNavBox nav a:hover div {
   background: #fff;
   width: 100%;
 }
 
-header#header .headerNavBox nav a:active {
+header#header .headerContainer .headerNavBox nav a:active {
   -webkit-transform: scale(0.96);
           transform: scale(0.96);
 }
 
-header#header .headerNavBox nav a + a {
+header#header .headerContainer .headerNavBox nav a + a {
   margin-left: 1.5rem;
 }
 
-header#header .headerNavBox button#menuButton {
+header#header .headerContainer .headerNavBox button#menuButton {
   background: transparent;
   border: none;
   display: none;
@@ -108,12 +121,12 @@ header#header .headerNavBox button#menuButton {
   z-index: 20;
 }
 
-header#header .headerNavBox button#menuButton .animatedMenu {
+header#header .headerContainer .headerNavBox button#menuButton .animatedMenu {
   height: 100%;
   width: 100%;
 }
 
-header#header .headerNavBox button#menuButton .animatedMenu:before {
+header#header .headerContainer .headerNavBox button#menuButton .animatedMenu:before {
   content: '';
   background: #fff;
   border-radius: .5rem;
@@ -128,7 +141,7 @@ header#header .headerNavBox button#menuButton .animatedMenu:before {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-header#header .headerNavBox button#menuButton .animatedMenu:after {
+header#header .headerContainer .headerNavBox button#menuButton .animatedMenu:after {
   content: '';
   background: #fff;
   border-radius: .5rem;
@@ -141,7 +154,7 @@ header#header .headerNavBox button#menuButton .animatedMenu:after {
   transition: .3s;
 }
 
-header#header .headerTextBox {
+header#header .headerContainer .headerTextBox {
   border: solid 2px #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,12 +164,13 @@ header#header .headerTextBox {
           align-items: center;
   height: clamp(20rem, 25vw, 40rem);
   width: clamp(40rem, 70vw, 70rem);
+  padding-left: 2rem;
   padding-right: clamp(1rem, 5vw, 10rem);
   -webkit-transform: translate(clamp(5rem, 5vw, 15rem), clamp(5rem, 10vh, 15rem));
           transform: translate(clamp(5rem, 5vw, 15rem), clamp(5rem, 10vh, 15rem));
 }
 
-header#header .headerTextBox p {
+header#header .headerContainer .headerTextBox p {
   color: #fff;
   text-transform: uppercase;
   font-size: clamp(3rem, 8vw, 8rem);
@@ -165,25 +179,26 @@ header#header .headerTextBox p {
 }
 
 @media (max-width: 665px) {
-  header#header .headerNavBox {
+  header#header .headerContainer .headerNavBox {
     padding: 3rem 2rem;
     margin: 0;
   }
-  header#header .headerNavBox .closeButton .animatedMenu:before {
+  header#header .headerContainer .headerNavBox .closeButton .animatedMenu:before {
     -webkit-transform: rotate(225deg);
             transform: rotate(225deg);
+    top: 45% !important;
   }
-  header#header .headerNavBox .closeButton .animatedMenu:after {
+  header#header .headerContainer .headerNavBox .closeButton .animatedMenu:after {
     -webkit-transform: rotate(315deg);
             transform: rotate(315deg);
     width: 4rem !important;
-    bottom: 59% !important;
-    left: 5% !important;
+    bottom: 45% !important;
+    left: 4% !important;
   }
-  header#header .headerNavBox img {
+  header#header .headerContainer .headerNavBox img {
     width: 70%;
   }
-  header#header .headerNavBox nav {
+  header#header .headerContainer .headerNavBox nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -202,43 +217,46 @@ header#header .headerTextBox p {
     left: 0;
     -webkit-transform: translate(100VW);
             transform: translate(100VW);
-    -webkit-transition: -webkit-transform .2s;
-    transition: -webkit-transform .2s;
-    transition: transform .2s;
-    transition: transform .2s, -webkit-transform .2s;
+    -webkit-transition: -webkit-transform .05s ease-in-out;
+    transition: -webkit-transform .05s ease-in-out;
+    transition: transform .05s ease-in-out;
+    transition: transform .05s ease-in-out, -webkit-transform .05s ease-in-out;
     z-index: 10;
   }
-  header#header .headerNavBox nav a {
+  header#header .headerContainer .headerNavBox nav a {
     width: 60%;
   }
-  header#header .headerNavBox nav a span {
-    font-size: clamp(3rem, 15vw, 15rem);
+  header#header .headerContainer .headerNavBox nav a span {
+    font-size: clamp(3rem, 15vw, 7rem);
   }
-  header#header .headerNavBox #navA1 {
+  header#header .headerContainer .headerNavBox nav a + a {
+    margin: 0;
+  }
+  header#header .headerContainer .headerNavBox #navA1 {
     -webkit-animation-delay: .1s;
             animation-delay: .1s;
   }
-  header#header .headerNavBox #navA2 {
+  header#header .headerContainer .headerNavBox #navA2 {
     -webkit-animation-delay: .15s;
             animation-delay: .15s;
   }
-  header#header .headerNavBox #navA3 {
+  header#header .headerContainer .headerNavBox #navA3 {
     -webkit-animation-delay: .2s;
             animation-delay: .2s;
   }
-  header#header .headerNavBox #navA4 {
+  header#header .headerContainer .headerNavBox #navA4 {
     -webkit-animation-delay: .25s;
             animation-delay: .25s;
   }
-  header#header .headerNavBox #navA5 {
+  header#header .headerContainer .headerNavBox #navA5 {
     -webkit-animation-delay: .3s;
             animation-delay: .3s;
   }
-  header#header .headerNavBox .onScreen {
+  header#header .headerContainer .headerNavBox .onScreen {
     -webkit-transform: translate(0);
             transform: translate(0);
   }
-  header#header .headerNavBox .onScreen .slideLeftAnim {
+  header#header .headerContainer .headerNavBox .onScreen .slideLeftAnim {
     -webkit-animation-name: slideLeft;
             animation-name: slideLeft;
     -webkit-animation-duration: .3s;
@@ -246,12 +264,13 @@ header#header .headerTextBox p {
     -webkit-animation-fill-mode: backwards;
             animation-fill-mode: backwards;
   }
-  header#header .headerNavBox button#menuButton {
+  header#header .headerContainer .headerNavBox button#menuButton {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-size: 0;
   }
-  header#header .headerTextBox {
+  header#header .headerContainer .headerTextBox {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -260,12 +279,12 @@ header#header .headerTextBox p {
             align-items: center;
     height: clamp(20rem, 25vw, 40rem);
     width: clamp(25rem, 90vw, 50rem);
-    padding-right: 0;
+    padding-right: 2rem;
     margin: 10rem auto 0 auto;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
-  header#header .headerTextBox p {
+  header#header .headerContainer .headerTextBox p {
     font-size: clamp(3rem, 10vw, 5rem);
   }
 }
@@ -276,24 +295,20 @@ header#header .headerTextBox p {
 /**/
 @-webkit-keyframes slideLeft {
   from {
-    opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(100vh);
+            transform: translateX(100vh);
   }
   to {
-    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
 }
 @keyframes slideLeft {
   from {
-    opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(100vh);
+            transform: translateX(100vh);
   }
   to {
-    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }

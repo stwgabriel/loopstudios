@@ -7,13 +7,9 @@ function animateAndOpen() {
 
       menuButton.classList.remove('closeButton')
       navBar.classList.remove('onScreen')
-
-      console.log('nao tem mais');
    } else {
 
       menuButton.classList.add('closeButton')
       navBar.classList.add('onScreen')
-
-      console.log('agr tem');
    }
 }
