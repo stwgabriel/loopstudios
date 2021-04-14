@@ -1,0 +1,293 @@
+header#header {
+
+   background         : url(../../public/images/desktop/image-hero.jpg);
+   background-size    : cover;
+   background-position: center;
+   display            : flex;
+   flex-direction     : column;
+
+   min-height: 60vh;
+   height    : clamp(60rem, 60vh, 100rem);
+   width     : 100%;
+
+   position: relative;
+
+   .darkOverlay {
+
+      position: absolute;
+
+      background: #0008;
+      width     : 100%;
+      height    : 100%;
+   }
+
+   .headerNavBox {
+
+      display        : flex;
+      align-items    : center;
+      justify-content: space-between;
+
+      padding: 3rem clamp(4rem, 4vw, 6rem);
+
+      position: relative;
+
+      max-width: 192rem;
+      margin   : 0 auto;
+
+      nav {
+
+         display: flex;
+
+         a {
+
+            div {
+
+               border-radius: 5rem;
+
+               height: .3rem;
+               width : 0;
+
+               margin-top: .3rem;
+
+               transition: width .2s;
+            }
+
+            span {
+
+               color    : #fff;
+               font-size: 1.7rem;
+            }
+
+            &:hover div {
+
+               background: #fff;
+
+               width: 100%;
+
+            }
+
+            &:active {
+
+               transform: scale(.96);
+            }
+         }
+
+         a+a {
+
+            margin-left: 1.5rem;
+         }
+      }
+
+      button#menuButton {
+
+         background: transparent;
+         border    : none;
+
+         display: none;
+
+         width : 4.5rem;
+         height: 4.5rem;
+
+         position: absolute;
+         top     : 2rem;
+         right   : 2rem;
+
+         z-index: 20;
+
+         .animatedMenu {
+
+            height: 100%;
+            width : 100%;
+
+            &:before {
+
+               content: '';
+
+               background   : #fff;
+               border-radius: .5rem;
+
+               width : 4rem;
+               height: .5rem;
+
+               position: absolute;
+               top     : 30%;
+               left    : 5%;
+
+               transition: transform .3s;
+            }
+
+            &:after {
+
+               content: '';
+
+               background   : #fff;
+               border-radius: .5rem;
+
+               width : 2.5rem;
+               height: .5rem;
+
+               position: absolute;
+               bottom  : 30%;
+               left    : 38%;
+
+               transition: .3s;
+            }
+         }
+      }
+   }
+
+   .headerTextBox {
+
+      border: solid 2px #fff;
+
+      display    : flex;
+      align-items: center;
+
+      height: clamp(20rem, 25vw, 40rem);
+      width : clamp(40rem, 70vw, 70rem);
+
+      padding-right: clamp(1rem, 5vw, 10rem);
+
+      transform: translate(clamp(5rem, 5vw, 15rem), clamp(5rem, 10vh, 15rem));
+
+      p {
+
+         color         : #fff;
+         text-transform: uppercase;
+
+         font-size  : clamp(3rem, 8vw, 8rem);
+         font-family: 'Josefin Sans', sans-serif;
+         font-weight: 200;
+      }
+   }
+}
+
+@media (max-width: 665px) {
+
+   header#header {
+
+      .headerNavBox {
+
+         padding: 3rem 2rem;
+         margin : 0;
+
+         .closeButton {
+
+            .animatedMenu {
+
+               &:before {
+
+                  transform: rotate(225deg);
+               }
+
+               &:after {
+
+                  transform: rotate(315deg);
+
+                  width: 4rem !important;
+
+                  bottom: 59% !important;
+                  left  : 5% !important;
+               }
+            }
+         }
+
+         img {
+
+            width: 70%;
+         }
+
+         nav {
+
+            flex-direction : column;
+            align-items    : center;
+            justify-content: center;
+
+            background-color: #000000ef;
+
+            position: fixed;
+            top     : 0;
+            right   : 0;
+            bottom  : 0;
+            left    : 0;
+
+            transform: translate(100VW);
+
+            transition: transform .2s;
+
+            z-index: 10;
+
+            a {
+
+               width: 60%;
+
+               span {
+
+                  font-size: clamp(3rem, 15vw, 15rem);
+               }
+            }
+         }
+
+         #navA1 {
+
+            animation-delay: .1s;
+         }
+
+         #navA2 {
+
+            animation-delay: .15s;
+         }
+
+         #navA3 {
+
+            animation-delay: .2s;
+         }
+
+         #navA4 {
+
+            animation-delay: .25s;
+         }
+
+         #navA5 {
+
+            animation-delay: .3s;
+         }
+
+         .onScreen {
+
+            transform: translate(0);
+
+            .slideLeftAnim {
+
+               animation-name     : slideLeft;
+               animation-duration : .3s;
+               animation-fill-mode: backwards;
+            }
+         }
+
+         button#menuButton {
+
+            display: flex;
+         }
+      }
+
+      .headerTextBox {
+
+         display    : flex;
+         align-items: center;
+
+         height: clamp(20rem, 25vw, 40rem);
+         width : clamp(25rem, 90vw, 50rem);
+
+         padding-right: 0;
+         margin       : 10rem auto 0 auto;
+
+         transform: translate(0, 0);
+
+         p {
+
+            font-size: clamp(3rem, 10vw, 5rem);
+         }
+      }
+   }
+}

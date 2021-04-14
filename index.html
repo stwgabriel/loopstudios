@@ -3,6 +3,10 @@
 
 <head>
    <meta charset="UTF-8">
+   <link rel="stylesheet" href="./src/styles/app.css">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100;200;300&display=swap"
+      rel="stylesheet">
    <!--  -->
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +15,48 @@
 </head>
 
 <body>
-   <header>
-      <div>
-         <h1 id="logo">loopstudios</h1>
-         <nav>
-            <a href=""><span>About</span></a>
-            <a href=""><span>Carees</span></a>
-            <a href=""><span>Events</span></a>
-            <a href=""><span>Products</span></a>
-            <a href=""><span>Support</span></a>
+   <header id="header">
+
+      <div class="darkOverlay"></div>
+
+      <div class="headerNavBox">
+
+         <h1 id="logo"><a href="#"><img src="./public/images/logo.svg" alt="Logo LoopStudio"></a></h1>
+
+         <button id="menuButton" onclick="animateAndOpen()">
+            <div class="animatedMenu"></div>
+         </button>
+
+         <nav id="nav">
+
+            <a class="slideLeftAnim " id="navA1" href="#">
+               <span>About</span>
+               <div></div>
+            </a>
+            <a class="slideLeftAnim " id="navA2" href="#">
+               <span>Careers</span>
+               <div></div>
+            </a>
+            <a class="slideLeftAnim " id="navA3" href="#">
+               <span>Events</span>
+               <div></div>
+            </a>
+            <a class="slideLeftAnim " id="navA4" href="#">
+               <span>Products</span>
+               <div></div>
+            </a>
+            <a class="slideLeftAnim " id="navA5" href="#">
+               <span>Support</span>
+               <div></div>
+            </a>
          </nav>
+
       </div>
-      <div>
+
+      <div class="headerTextBox">
          <p>immersive experiences that deliver</p>
       </div>
+
    </header>
    <section>
 
@@ -35,6 +67,7 @@
    <footer>
 
    </footer>
+   <script src="./src/js/mobileMenu.js"></script>
 </body>
 
 </html>
