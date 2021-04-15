@@ -3,13 +3,9 @@
 
    display    : flex;
    align-items: flex-end;
+   width      : 100%;
 
-   max-width: 192rem;
-   width    : 100%;
-
-   padding       : clamp(4rem, 5vw, 8rem);
-   padding-bottom: 20rem;
-   margin        : 0 auto;
+   padding: 20rem 0;
 
    .usBoxOne {
 
@@ -25,24 +21,23 @@
 
       background: #fff;
 
-      width: 50%;
+      width: 60%;
 
-      padding      : 5rem clamp(2rem, 4vw, 8rem);
+      padding      : 5rem clamp(2rem, 3.6vw, 8rem);
       margin-left  : -15rem;
-      margin-bottom: -10rem;
+      margin-bottom: -15rem;
 
       h2 {
 
-         font-size     : clamp(3.5rem, 3vw, 5rem);
-         font-weight   : 300;
-         font-family   : 'Josefin Sans', sans-serif;
-         text-transform: uppercase;
+         @include JosefinSansFont;
+         font-size: clamp(3rem, 4vw, 8rem);
       }
 
       p {
 
          color    : #696969;
-         font-size: clamp(1.8rem, 1vw, 3rem);
+         font-size: 1.8rem;
+         font-size: clamp(1.3rem, 1.5vw, 3rem);
 
          margin-top: 6rem;
       }
@@ -76,9 +71,8 @@
 
       .usBoxTwo {
 
-         background : #fff;
-         font-family: 'Josefin Sans', sans-serif;
-         text-align : center;
+         background: #fff;
+         text-align: center;
 
 
          width: 100%;
@@ -86,18 +80,7 @@
          padding: clamp(4rem, 5vw, 8rem) 2rem;
          margin : 2rem auto;
 
-         h2 {
-
-            font-size     : clamp(3.5rem, 5vw, 5rem);
-            font-weight   : 300;
-            text-transform: uppercase;
-         }
-
          p {
-
-
-            font-size: clamp(2.5rem, 5vw, 3rem);
-
             margin-top: 8rem;
          }
 

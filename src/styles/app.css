@@ -16,6 +16,31 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-size: clamp(3rem, 5vw, 8rem);
+  text-transform: uppercase;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  max-width: 192rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
 @media (min-width: 1650px) {
   :root {
     font-size: 100%;
@@ -28,6 +53,7 @@ header#header {
   background-size: cover;
   background-position: center;
   min-height: 80vh;
+  height: 80rem;
   height: clamp(60rem, 80vh, 100rem);
   width: 100%;
   position: relative;
@@ -104,6 +130,7 @@ header#header .headerContainer .headerNavBox .screenBox nav a div {
 
 header#header .headerContainer .headerNavBox .screenBox nav a span {
   color: #fff;
+  font-size: 2.3rem;
   font-size: clamp(2rem, 1.5vw, 4rem);
 }
 
@@ -177,8 +204,9 @@ header#header .headerContainer .headerTextBox {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 90%;
   width: clamp(25rem, 60vw, 70rem);
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   -webkit-transform: translate(clamp(5rem, 5vw, 15rem), clamp(15rem, 20vh, 30rem));
           transform: translate(clamp(5rem, 5vw, 15rem), clamp(15rem, 20vh, 30rem));
 }
@@ -186,6 +214,7 @@ header#header .headerContainer .headerTextBox {
 header#header .headerContainer .headerTextBox p {
   color: #fff;
   text-transform: uppercase;
+  font-size: 4.5rem;
   font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 200;
 }
@@ -264,6 +293,7 @@ header#header .headerContainer .headerTextBox p {
             align-items: center;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    height: 30rem;
     height: clamp(20rem, 25vw, 40rem);
     width: clamp(20rem, 80vw, 40rem);
     padding: .5rem;
@@ -309,6 +339,9 @@ header#header .headerContainer .headerTextBox p {
     -webkit-animation-fill-mode: backwards;
             animation-fill-mode: backwards;
   }
+  header#header .headerContainer .onScreen .screenBox #nav a span {
+    font-size: 5rem;
+  }
   header#header .headerContainer .onScreen .screenBox button#menuButton {
     position: fixed;
     top: 2rem;
@@ -336,11 +369,8 @@ header#header .headerContainer .headerTextBox p {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  max-width: 192rem;
   width: 100%;
-  padding: clamp(4rem, 5vw, 8rem);
-  padding-bottom: 20rem;
-  margin: 0 auto;
+  padding: 20rem 0;
 }
 
 #us .usBoxOne {
@@ -353,22 +383,23 @@ header#header .headerContainer .headerTextBox p {
 
 #us .usBoxTwo {
   background: #fff;
-  width: 50%;
-  padding: 5rem clamp(2rem, 4vw, 8rem);
+  width: 60%;
+  padding: 5rem clamp(2rem, 3.6vw, 8rem);
   margin-left: -15rem;
-  margin-bottom: -10rem;
+  margin-bottom: -15rem;
 }
 
 #us .usBoxTwo h2 {
-  font-size: clamp(3.5rem, 3vw, 5rem);
-  font-weight: 300;
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
   text-transform: uppercase;
+  font-size: clamp(3rem, 4vw, 8rem);
 }
 
 #us .usBoxTwo p {
   color: #696969;
-  font-size: clamp(1.8rem, 1vw, 3rem);
+  font-size: 1.8rem;
+  font-size: clamp(1.3rem, 1.5vw, 3rem);
   margin-top: 6rem;
 }
 
@@ -399,19 +430,12 @@ header#header .headerContainer .headerTextBox p {
   }
   #us .usBoxTwo {
     background: #fff;
-    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     width: 100%;
     padding: clamp(4rem, 5vw, 8rem) 2rem;
     margin: 2rem auto;
   }
-  #us .usBoxTwo h2 {
-    font-size: clamp(3.5rem, 5vw, 5rem);
-    font-weight: 300;
-    text-transform: uppercase;
-  }
   #us .usBoxTwo p {
-    font-size: clamp(2.5rem, 5vw, 3rem);
     margin-top: 8rem;
   }
 }
@@ -426,13 +450,11 @@ section#creations {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 8rem;
+  padding: 8rem 0;
 }
 
 section#creations .creationsHeader {
   color: #000;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,40 +470,132 @@ section#creations .creationsHeader {
       flex-wrap: wrap;
 }
 
-section#creations .creationsHeader h2 {
-  font-size: 5rem;
-  font-weight: inherit;
-  text-transform: uppercase;
-}
-
-section#creations .creationsHeader a {
+section#creations .creationsButton {
   background: transparent;
   border: solid 1px #000;
+  color: #000;
   cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
   font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: .5rem;
-  text-transform: uppercase;
   padding: 1.2rem 3rem 1rem 3rem;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
-section#creations .creationsHeader a:hover {
+section#creations .creationsButton:hover {
   background: #000;
   -webkit-box-shadow: 0 0 2.5rem #0003;
           box-shadow: 0 0 2.5rem #0003;
   color: #fff;
 }
 
-@media only screen and (max-width: 665px) {
-  section#creations {
-    padding: 0rem;
+section#creations .bottomButton {
+  display: none;
+}
+
+section#creations .creationsContent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  gap: clamp(2rem, 2vw, 5rem);
+  width: 100%;
+  padding: clamp(2rem, 1vw, 5rem);
+}
+
+section#creations .creationsContent .creationBlock {
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: clamp(35rem, 25vw, 70rem);
+  position: relative;
+  z-index: 10;
+}
+
+section#creations .creationsContent .creationBlock p {
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 3rem;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  z-index: 200;
+}
+
+section#creations .creationsContent .creationBlock:hover .filterlayer {
+  background: #eeea;
+  z-index: 1;
+}
+
+section#creations .creationsContent .creationBlock:hover p {
+  color: #000;
+}
+
+section#creations .creationsContent .creationBlock .filterlayer {
+  background: #0001;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}
+
+section#creations .creationsContent .deepEarth {
+  background-image: url(../../public/images/desktop/image-deep-earth.jpg);
+}
+
+section#creations .creationsContent .nightArcade {
+  background-image: url(../../public/images/desktop/image-night-arcade.jpg);
+}
+
+section#creations .creationsContent .soccerTeamVR {
+  background-image: url(../../public/images/desktop/image-soccer-team.jpg);
+}
+
+section#creations .creationsContent .theGrid {
+  background-image: url(../../public/images/desktop/image-grid.jpg);
+}
+
+section#creations .creationsContent .fromUpAboveVR {
+  background-image: url(../../public/images/desktop/image-from-above.jpg);
+}
+
+section#creations .creationsContent .pocketBorealis {
+  background-image: url(../../public/images/desktop/image-pocket-borealis.jpg);
+}
+
+section#creations .creationsContent .theCuriosity {
+  background-image: url(../../public/images/desktop/image-curiosity.jpg);
+}
+
+section#creations .creationsContent .makeItFishEye {
+  background-image: url(../../public/images/desktop/image-fisheye.jpg);
+}
+
+@media (max-width: 900px) {
+  section#creations .creationsContent {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
   }
+}
+
+@media only screen and (max-width: 670px) {
   section#creations .creationsHeader {
     color: #000;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
+    text-transform: uppercase;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -492,20 +606,216 @@ section#creations .creationsHeader a:hover {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
-    padding-bottom: 10rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  section#creations .creationsHeader h2 {
-    font-size: 4rem;
-  }
-  section#creations .creationsHeader a {
+  section#creations .creationsHeader .creationsButton {
     font-size: 1.8rem;
-    padding: 1.2rem 3rem 1rem 3rem;
+  }
+  section#creations .topButton {
+    display: none;
+  }
+  section#creations .bottomButton {
+    display: block;
+    text-align: center;
+    width: 70%;
+    width: clamp(15rem, 70%, 30rem);
+    margin: 5rem auto 0 auto;
+  }
+  section#creations .creationsContent {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[8];
+        grid-template-rows: repeat(8, 1fr);
+    padding: 0;
+  }
+  section#creations .creationsContent .creationBlock {
+    height: 18rem;
+    height: clamp(10rem, 45vw, 25rem);
+  }
+  section#creations .creationsContent .deepEarth {
+    background-image: url(../../public/images/mobile/image-deep-earth.jpg);
+  }
+  section#creations .creationsContent .nightArcade {
+    background-image: url(../../public/images/mobile/image-night-arcade.jpg);
+  }
+  section#creations .creationsContent .soccerTeamVR {
+    background-image: url(../../public/images/mobile/image-soccer-team.jpg);
+  }
+  section#creations .creationsContent .theGrid {
+    background-image: url(../../public/images/mobile/image-grid.jpg);
+  }
+  section#creations .creationsContent .fromUpAboveVR {
+    background-image: url(../../public/images/mobile/image-from-above.jpg);
+  }
+  section#creations .creationsContent .pocketBorealis {
+    background-image: url(../../public/images/mobile/image-pocket-borealis.jpg);
+  }
+  section#creations .creationsContent .theCuriosity {
+    background-image: url(../../public/images/mobile/image-curiosity.jpg);
+  }
+  section#creations .creationsContent .makeItFishEye {
+    background-image: url(../../public/images/mobile/image-fisheye.jpg);
   }
 }
 
 /**/
+footer#footer {
+  background: #000;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+footer#footer .footerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  max-width: 192rem;
+  margin: 0 auto;
+}
+
+footer#footer .footerContainer .footerBoxOne {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer#footer .footerContainer .footerBoxOne img {
+  width: 15rem;
+  margin-bottom: 1.5rem;
+}
+
+footer#footer .footerContainer .footerBoxOne .footerLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer#footer .footerContainer .footerBoxOne .footerLinks a div {
+  border-radius: 5rem;
+  height: .3rem;
+  width: 0;
+  margin-top: .3rem;
+  -webkit-transition: width .2s;
+  transition: width .2s;
+}
+
+footer#footer .footerContainer .footerBoxOne .footerLinks a span {
+  color: #fff;
+  font-size: 2.3rem;
+  font-size: clamp(2rem, 1.5vw, 4rem);
+}
+
+footer#footer .footerContainer .footerBoxOne .footerLinks a:hover div {
+  background: #fff;
+  width: 100%;
+}
+
+footer#footer .footerContainer .footerBoxOne .footerLinks a:active {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+footer#footer .footerContainer .footerBoxOne .footerLinks a + a {
+  margin-left: 1.5rem;
+}
+
+footer#footer .footerContainer .footerBoxOne .footerLinks a span {
+  font-size: clamp(1.5rem, 1vw, 4rem);
+}
+
+footer#footer .footerContainer .footerBoxTwo img {
+  width: 25px;
+}
+
+footer#footer .footerContainer .footerBoxTwo .socialMedias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer#footer .footerContainer .footerBoxTwo .socialMedias a div {
+  border-radius: 5rem;
+  height: .3rem;
+  width: 0;
+  margin-top: .3rem;
+  -webkit-transition: width .2s;
+  transition: width .2s;
+}
+
+footer#footer .footerContainer .footerBoxTwo .socialMedias a span {
+  color: #fff;
+  font-size: 2.3rem;
+  font-size: clamp(2rem, 1.5vw, 4rem);
+}
+
+footer#footer .footerContainer .footerBoxTwo .socialMedias a:hover div {
+  background: #fff;
+  width: 100%;
+}
+
+footer#footer .footerContainer .footerBoxTwo .socialMedias a:active {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+footer#footer .footerContainer .footerBoxTwo .socialMedias a + a {
+  margin-left: 1.5rem;
+}
+
+footer#footer .footerContainer .footerBoxTwo .socialMedias a {
+  width: 25px;
+}
+
+footer#footer .footerContainer .footerBoxTwo span {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 670px) {
+  footer#footer * {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer#footer .footerContainer .footerBoxOne img {
+    margin: 2rem 0;
+  }
+  footer#footer .footerContainer .footerBoxOne .footerLinks a + a {
+    margin: .8rem 0 0 0;
+  }
+  footer#footer .footerContainer .footerBoxTwo .socialMedias {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    margin-top: 5rem;
+  }
+}
+
 /**/
 @-webkit-keyframes slideLeft {
   from {

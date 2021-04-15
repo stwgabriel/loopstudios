@@ -1,4 +1,55 @@
 //
+
+@mixin JosefinSansFont {
+
+   font-family   : 'Josefin Sans', sans-serif;
+   font-weight   : 300;
+   text-transform: uppercase
+}
+
+@mixin MultpleLinks {
+
+   a {
+
+      div {
+
+         border-radius: 5rem;
+
+         height: .3rem;
+         width : 0;
+
+         margin-top: .3rem;
+
+         transition: width .2s;
+      }
+
+      span {
+
+         color    : #fff;
+         font-size: 2.3rem;
+         font-size: clamp(2rem, 1.5vw, 4rem);
+      }
+
+      &:hover div {
+
+         background: #fff;
+
+         width: 100%;
+      }
+
+      &:active {
+
+         transform: scale(.96);
+      }
+   }
+
+   a+a {
+
+      margin-left: 1.5rem;
+   }
+}
+
+//
 :root {
 
    font-size  : 62.5%;
@@ -13,10 +64,29 @@
    padding   : 0;
 }
 
-
 a {
 
    text-decoration: none;
+}
+
+h2 {
+
+   @include JosefinSansFont;
+   font-size: 4rem;
+   font-size     : clamp(3rem, 5vw, 8rem);
+   text-transform: uppercase;
+}
+
+body {
+   display       : flex;
+   flex-direction: column;
+}
+
+main {
+
+   max-width: 192rem;
+   width    : 90%;
+   margin   : 0 auto;
 }
 
 @media (min-width: 1650px) {

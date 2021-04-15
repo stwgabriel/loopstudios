@@ -6,6 +6,7 @@ header#header {
    background-position: center;
 
    min-height: 80vh;
+   height    : 80rem;
    height    : clamp(60rem, 80vh, 100rem);
    width     : 100%;
 
@@ -68,43 +69,7 @@ header#header {
 
                display: flex;
 
-               a {
-
-                  div {
-
-                     border-radius: 5rem;
-
-                     height: .3rem;
-                     width : 0;
-
-                     margin-top: .3rem;
-
-                     transition: width .2s;
-                  }
-
-                  span {
-
-                     color    : #fff;
-                     font-size: clamp(2rem, 1.5vw, 4rem);
-                  }
-
-                  &:hover div {
-
-                     background: #fff;
-
-                     width: 100%;
-                  }
-
-                  &:active {
-
-                     transform: scale(.96);
-                  }
-               }
-
-               a+a {
-
-                  margin-left: 1.5rem;
-               }
+               @include MultpleLinks;
             }
 
             button#menuButton {
@@ -176,9 +141,10 @@ header#header {
          display    : flex;
          align-items: center;
 
+         width: 90%;
          width: clamp(25rem, 60vw, 70rem);
 
-         padding: 6rem 2rem;
+         padding: 4rem 2rem;
 
          transform: translate(clamp(5rem, 5vw, 15rem), clamp(15rem, 20vh, 30rem));
 
@@ -187,6 +153,7 @@ header#header {
             color         : #fff;
             text-transform: uppercase;
 
+            font-size: 4.5rem;
             font-size: clamp(3rem, 8vw, 7rem);
 
             font-weight: 200;
@@ -224,7 +191,7 @@ header#header {
 
                nav#nav {
 
-                  width : 100%;
+                  width     : 100%;
                   min-height: 35rem;
 
                   flex-direction : column;
@@ -290,6 +257,7 @@ header#header {
             align-items: center;
             box-sizing : border-box;
 
+            height: 30rem;
             height: clamp(20rem, 25vw, 40rem);
             width : clamp(20rem, 80vw, 40rem);
 
@@ -330,8 +298,7 @@ header#header {
 
                #logo {
 
-                  position        : absolute;
-           
+                  position: absolute;
                }
 
                #nav {
@@ -341,12 +308,17 @@ header#header {
                   position: relative;
                   top     : 4rem;
 
-              
+
                   a {
 
                      animation-name     : slideLeft;
                      animation-duration : .3s;
                      animation-fill-mode: backwards;
+
+                     span {
+                        font-size: 5rem;
+                     }
+
                   }
                }
 

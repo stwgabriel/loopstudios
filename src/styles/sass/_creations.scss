@@ -5,14 +5,12 @@ section#creations {
    display       : flex;
    flex-direction: column;
 
-   padding: 8rem;
+   padding: 8rem 0;
+
 
    .creationsHeader {
 
       color: #000;
-
-      font-family: 'Josefin Sans', sans-serif;
-      font-weight: 300;
 
       display        : flex;
       align-items    : center;
@@ -22,54 +20,167 @@ section#creations {
 
       padding-bottom: 10rem;
       flex-wrap     : wrap;
+   }
 
+   .creationsButton {
 
-      h2 {
+      background: transparent;
+      border    : solid 1px #000;
+      color     : #000;
+      cursor    : pointer;
 
-         font-size     : 5rem;
-         font-weight   : inherit;
-         text-transform: uppercase;
+      @include JosefinSansFont;
+      font-size     : 1.8rem;
+      font-weight   : 400;
+      letter-spacing: .5rem;
+
+      padding: 1.2rem 3rem 1rem 3rem;
+
+      transition: all .3s;
+
+      &:hover {
+
+         background: #000;
+         box-shadow: 0 0 2.5rem #0003;
+         color     : #fff;
       }
+   }
 
-      a {
+   .bottomButton {
 
-         background: transparent;
-         border    : solid 1px #000;
-         cursor    : pointer;
+      display: none;
+   }
 
-         font-size     : 1.8rem;
-         font-weight   : 400;
-         letter-spacing: .5rem;
-         text-transform: uppercase;
+   .creationsContent {
 
-         padding: 1.2rem 3rem 1rem 3rem;
 
-         transition: all .3s;
+      display              : grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows   : repeat(2, 1fr);
+      gap                  : 2rem;
+      gap                  : clamp(2rem, 2vw, 5rem);
+
+      width: 100%;
+
+      padding: clamp(2rem, 1vw, 5rem);
+
+      .creationBlock {
+
+         background-size  : cover;
+         background-repeat: no-repeat;
+         cursor           : pointer;
+
+         height  : clamp(35rem, 25vw, 70rem);
+         position: relative;
+         z-index : 10;
+
+         p {
+
+            color: #fff;
+
+            @include JosefinSansFont;
+            font-size: 3rem;
+
+            position: absolute;
+            bottom  : 10%;
+            left    : 10%;
+
+            z-index: 200;
+         }
 
          &:hover {
 
-            background: #000;
-            box-shadow: 0 0 2.5rem #0003;
-            color     : #fff;
+            .filterlayer {
+
+               background: #eeea;
+               z-index   : 1;
+            }
+
+            p {
+               color: #000;
+            }
          }
+
+         .filterlayer {
+
+            background: #0001;
+
+            position: absolute;
+
+            height: 100%;
+            width : 100%;
+
+            transition: background .2s;
+         }
+      }
+
+      .deepEarth {
+
+         background-image: url(../../public/images/desktop/image-deep-earth.jpg);
+      }
+
+      .nightArcade {
+
+         background-image: url(../../public/images/desktop/image-night-arcade.jpg);
+      }
+
+      .soccerTeamVR {
+
+         background-image: url(../../public/images/desktop/image-soccer-team.jpg);
+      }
+
+      .theGrid {
+
+         background-image: url(../../public/images/desktop/image-grid.jpg);
+      }
+
+      .fromUpAboveVR {
+
+         background-image: url(../../public/images/desktop/image-from-above.jpg);
+      }
+
+      .pocketBorealis {
+
+         background-image: url(../../public/images/desktop/image-pocket-borealis.jpg);
+      }
+
+      .theCuriosity {
+
+         background-image: url(../../public/images/desktop/image-curiosity.jpg);
+      }
+
+      .makeItFishEye {
+
+         background-image: url(../../public/images/desktop/image-fisheye.jpg);
       }
    }
 }
 
-@media only screen and (max-width:665px) {
+
+@media (max-width:900px) {
 
 
    section#creations {
 
+      .creationsContent {
 
-      padding: 0rem;
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-rows   : repeat(3, 1fr);
+      }
+   }
+
+}
+
+@media only screen and (max-width:670px) {
+
+
+   section#creations {
 
       .creationsHeader {
 
          color: #000;
 
-         font-family: 'Josefin Sans', sans-serif;
-         font-weight: 300;
+         @include JosefinSansFont;
 
          display        : flex;
          align-items    : center;
@@ -77,23 +188,81 @@ section#creations {
 
          width: 100%;
 
-         padding-bottom: 10rem;
-         flex-wrap     : wrap;
+         flex-wrap: wrap;
 
-
-         h2 {
-
-            font-size: 4rem;
-
-         }
-
-         a {
+         .creationsButton {
 
             font-size: 1.8rem;
+         }
+      }
 
-            padding: 1.2rem 3rem 1rem 3rem;
+      .topButton {
+
+         display: none;
+      }
+
+      .bottomButton {
+
+         display   : block;
+         text-align: center;
+
+         width : 70%;
+         width : clamp(15rem, 70%, 30rem);
+         margin: 5rem auto 0 auto;
+      }
+
+      .creationsContent {
+
+         grid-template-columns: 1fr;
+         grid-template-rows   : repeat(8, 1fr);
+
+         padding: 0;
+
+         .creationBlock {
+
+            height: 18rem;
+            height: clamp(10rem, 45vw, 25rem);
          }
 
+         .deepEarth {
+
+            background-image: url(../../public/images/mobile/image-deep-earth.jpg);
+         }
+
+         .nightArcade {
+
+            background-image: url(../../public/images/mobile/image-night-arcade.jpg);
+         }
+
+         .soccerTeamVR {
+
+            background-image: url(../../public/images/mobile/image-soccer-team.jpg);
+         }
+
+         .theGrid {
+
+            background-image: url(../../public/images/mobile/image-grid.jpg);
+         }
+
+         .fromUpAboveVR {
+
+            background-image: url(../../public/images/mobile/image-from-above.jpg);
+         }
+
+         .pocketBorealis {
+
+            background-image: url(../../public/images/mobile/image-pocket-borealis.jpg);
+         }
+
+         .theCuriosity {
+
+            background-image: url(../../public/images/mobile/image-curiosity.jpg);
+         }
+
+         .makeItFishEye {
+
+            background-image: url(../../public/images/mobile/image-fisheye.jpg);
+         }
       }
    }
 }
