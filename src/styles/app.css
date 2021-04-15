@@ -2,6 +2,7 @@
 :root {
   font-size: 62.5%;
   font-family: 'Alata', sans-serif;
+  font-weight: 400;
 }
 
 * {
@@ -26,8 +27,8 @@ header#header {
   background: url(../../public/images/desktop/image-hero.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 60vh;
-  height: clamp(60rem, 60vh, 100rem);
+  min-height: 80vh;
+  height: clamp(60rem, 80vh, 100rem);
   width: 100%;
   position: relative;
 }
@@ -47,41 +48,52 @@ header#header .headerContainer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
   width: 100%;
   max-width: 192rem;
   margin: 0 auto;
+  z-index: 100;
 }
 
 header#header .headerContainer .headerNavBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 3rem;
+  min-height: 10vh;
+}
+
+header#header .headerContainer .headerNavBox .screenBox {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  padding: 3rem clamp(4rem, 4vw, 6rem);
 }
 
-header#header .headerContainer .headerNavBox #logo {
-  z-index: 20;
+header#header .headerContainer .headerNavBox .screenBox #logo {
+  min-width: 20rem;
+  z-index: 100;
 }
 
-header#header .headerContainer .headerNavBox #logo img {
-  width: clamp(15rem, 11vw, 40rem);
+header#header .headerContainer .headerNavBox .screenBox #logo img {
+  -webkit-transition: width .05s;
+  transition: width .05s;
 }
 
-header#header .headerContainer .headerNavBox nav {
+header#header .headerContainer .headerNavBox .screenBox nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header#header .headerContainer .headerNavBox nav a div {
+header#header .headerContainer .headerNavBox .screenBox nav a div {
   border-radius: 5rem;
   height: .3rem;
   width: 0;
@@ -90,43 +102,43 @@ header#header .headerContainer .headerNavBox nav a div {
   transition: width .2s;
 }
 
-header#header .headerContainer .headerNavBox nav a span {
+header#header .headerContainer .headerNavBox .screenBox nav a span {
   color: #fff;
   font-size: clamp(2rem, 1.5vw, 4rem);
 }
 
-header#header .headerContainer .headerNavBox nav a:hover div {
+header#header .headerContainer .headerNavBox .screenBox nav a:hover div {
   background: #fff;
   width: 100%;
 }
 
-header#header .headerContainer .headerNavBox nav a:active {
+header#header .headerContainer .headerNavBox .screenBox nav a:active {
   -webkit-transform: scale(0.96);
           transform: scale(0.96);
 }
 
-header#header .headerContainer .headerNavBox nav a + a {
+header#header .headerContainer .headerNavBox .screenBox nav a + a {
   margin-left: 1.5rem;
 }
 
-header#header .headerContainer .headerNavBox button#menuButton {
+header#header .headerContainer .headerNavBox .screenBox button#menuButton {
   background: transparent;
   border: none;
   display: none;
   width: 4.5rem;
   height: 4.5rem;
   position: absolute;
-  top: 2rem;
-  right: 2rem;
-  z-index: 20;
+  top: -1rem;
+  right: 0rem;
+  z-index: 2000;
 }
 
-header#header .headerContainer .headerNavBox button#menuButton .animatedMenu {
+header#header .headerContainer .headerNavBox .screenBox button#menuButton .animatedMenu {
   height: 100%;
   width: 100%;
 }
 
-header#header .headerContainer .headerNavBox button#menuButton .animatedMenu:before {
+header#header .headerContainer .headerNavBox .screenBox button#menuButton .animatedMenu:before {
   content: '';
   background: #fff;
   border-radius: .5rem;
@@ -141,7 +153,7 @@ header#header .headerContainer .headerNavBox button#menuButton .animatedMenu:bef
   transition: transform .3s, -webkit-transform .3s;
 }
 
-header#header .headerContainer .headerNavBox button#menuButton .animatedMenu:after {
+header#header .headerContainer .headerNavBox .screenBox button#menuButton .animatedMenu:after {
   content: '';
   background: #fff;
   border-radius: .5rem;
@@ -157,18 +169,18 @@ header#header .headerContainer .headerNavBox button#menuButton .animatedMenu:aft
 header#header .headerContainer .headerTextBox {
   border: solid 2px #fff;
   font-family: 'Josefin Sans', sans-serif;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: clamp(20rem, 35vw, 40rem);
-  width: clamp(40rem, 60vw, 70rem);
-  padding-left: 2rem;
-  padding-right: clamp(1rem, 5vw, 10rem);
-  -webkit-transform: translate(clamp(5rem, 5vw, 15rem), clamp(5rem, 10vh, 15rem));
-          transform: translate(clamp(5rem, 5vw, 15rem), clamp(5rem, 10vh, 15rem));
+  width: clamp(25rem, 60vw, 70rem);
+  padding: 6rem 2rem;
+  -webkit-transform: translate(clamp(5rem, 5vw, 15rem), clamp(15rem, 20vh, 30rem));
+          transform: translate(clamp(5rem, 5vw, 15rem), clamp(15rem, 20vh, 30rem));
 }
 
 header#header .headerContainer .headerTextBox p {
@@ -178,94 +190,66 @@ header#header .headerContainer .headerTextBox p {
   font-weight: 200;
 }
 
-@media (max-width: 665px) {
-  header#header .headerContainer .headerNavBox {
-    padding: 3rem 2rem;
-    margin: 0;
+@media only screen and (max-width: 670px) {
+  header#header .headerContainer {
+    height: 100%;
+    width: 100%;
   }
-  header#header .headerContainer .headerNavBox .closeButton .animatedMenu:before {
-    -webkit-transform: rotate(225deg);
-            transform: rotate(225deg);
-    top: 45% !important;
+  header#header .headerContainer .headerNavBox .screenBox {
+    padding: 0;
   }
-  header#header .headerContainer .headerNavBox .closeButton .animatedMenu:after {
-    -webkit-transform: rotate(315deg);
-            transform: rotate(315deg);
-    width: 4rem !important;
-    bottom: 45% !important;
-    left: 4% !important;
+  header#header .headerContainer .headerNavBox .screenBox::-webkit-scrollbar {
+    display: none;
   }
-  header#header .headerContainer .headerNavBox img {
-    width: 70%;
+  header#header .headerContainer .headerNavBox .screenBox h1#logo img {
+    width: clamp(15rem, 50vw, 20rem);
   }
-  header#header .headerContainer .headerNavBox nav {
+  header#header .headerContainer .headerNavBox .screenBox nav#nav {
+    width: 100%;
+    min-height: 35rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #000000ef;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 100vh;
-    -webkit-transform: translate(100VW);
-            transform: translate(100VW);
-    -webkit-transition: -webkit-transform .05s ease-in-out;
-    transition: -webkit-transform .05s ease-in-out;
-    transition: transform .05s ease-in-out;
-    transition: transform .05s ease-in-out, -webkit-transform .05s ease-in-out;
-    z-index: 10;
+    padding: 1rem;
+    display: none;
   }
-  header#header .headerContainer .headerNavBox nav a {
-    width: 60%;
+  header#header .headerContainer .headerNavBox .screenBox nav#nav a {
+    min-width: 50%;
   }
-  header#header .headerContainer .headerNavBox nav a span {
-    font-size: clamp(3rem, 15vw, 7rem);
+  header#header .headerContainer .headerNavBox .screenBox nav#nav a span {
+    font-size: clamp(2rem, 14vw, 7rem);
   }
-  header#header .headerContainer .headerNavBox nav a + a {
+  header#header .headerContainer .headerNavBox .screenBox nav#nav a + a {
     margin: 0;
   }
-  header#header .headerContainer .headerNavBox #navA1 {
+  header#header .headerContainer .headerNavBox .screenBox nav#nav #navA1 {
     -webkit-animation-delay: .1s;
             animation-delay: .1s;
   }
-  header#header .headerContainer .headerNavBox #navA2 {
+  header#header .headerContainer .headerNavBox .screenBox nav#nav #navA2 {
     -webkit-animation-delay: .15s;
             animation-delay: .15s;
   }
-  header#header .headerContainer .headerNavBox #navA3 {
+  header#header .headerContainer .headerNavBox .screenBox nav#nav #navA3 {
     -webkit-animation-delay: .2s;
             animation-delay: .2s;
   }
-  header#header .headerContainer .headerNavBox #navA4 {
+  header#header .headerContainer .headerNavBox .screenBox nav#nav #navA4 {
     -webkit-animation-delay: .25s;
             animation-delay: .25s;
   }
-  header#header .headerContainer .headerNavBox #navA5 {
+  header#header .headerContainer .headerNavBox .screenBox nav#nav #navA5 {
     -webkit-animation-delay: .3s;
             animation-delay: .3s;
   }
-  header#header .headerContainer .headerNavBox .onScreen {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  header#header .headerContainer .headerNavBox .onScreen .slideLeftAnim {
-    -webkit-animation-name: slideLeft;
-            animation-name: slideLeft;
-    -webkit-animation-duration: .3s;
-            animation-duration: .3s;
-    -webkit-animation-fill-mode: backwards;
-            animation-fill-mode: backwards;
-  }
-  header#header .headerContainer .headerNavBox button#menuButton {
+  header#header .headerContainer .headerNavBox .screenBox button#menuButton {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -278,15 +262,69 @@ header#header .headerContainer .headerTextBox p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     height: clamp(20rem, 25vw, 40rem);
-    width: clamp(25rem, 90vw, 50rem);
-    padding-right: 2rem;
-    margin: 10rem auto 0 auto;
+    width: clamp(20rem, 80vw, 40rem);
+    padding: .5rem;
+    margin: 15rem auto 0 auto;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
   header#header .headerContainer .headerTextBox p {
     font-size: clamp(3rem, 10vw, 5rem);
+  }
+  header#header .headerContainer .onScreen {
+    background: #000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+  }
+  header#header .headerContainer .onScreen .screenBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3rem;
+    overflow-y: scroll;
+  }
+  header#header .headerContainer .onScreen .screenBox #logo {
+    position: absolute;
+  }
+  header#header .headerContainer .onScreen .screenBox #nav {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    position: relative;
+    top: 4rem;
+  }
+  header#header .headerContainer .onScreen .screenBox #nav a {
+    -webkit-animation-name: slideLeft;
+            animation-name: slideLeft;
+    -webkit-animation-duration: .3s;
+            animation-duration: .3s;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+  }
+  header#header .headerContainer .onScreen .screenBox button#menuButton {
+    position: fixed;
+    top: 2rem;
+    right: 2.5rem;
+  }
+  header#header .headerContainer .onScreen .screenBox button#menuButton .animatedMenu:before {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+    top: 45%;
+  }
+  header#header .headerContainer .onScreen .screenBox button#menuButton .animatedMenu:after {
+    -webkit-transform: rotate(315deg);
+            transform: rotate(315deg);
+    width: 4rem;
+    bottom: 45%;
+    left: 4%;
   }
 }
 
@@ -379,6 +417,94 @@ header#header .headerContainer .headerTextBox p {
 }
 
 /**/
+section#creations {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8rem;
+}
+
+section#creations .creationsHeader {
+  color: #000;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-bottom: 10rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section#creations .creationsHeader h2 {
+  font-size: 5rem;
+  font-weight: inherit;
+  text-transform: uppercase;
+}
+
+section#creations .creationsHeader a {
+  background: transparent;
+  border: solid 1px #000;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  padding: 1.2rem 3rem 1rem 3rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+section#creations .creationsHeader a:hover {
+  background: #000;
+  -webkit-box-shadow: 0 0 2.5rem #0003;
+          box-shadow: 0 0 2.5rem #0003;
+  color: #fff;
+}
+
+@media only screen and (max-width: 665px) {
+  section#creations {
+    padding: 0rem;
+  }
+  section#creations .creationsHeader {
+    color: #000;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding-bottom: 10rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section#creations .creationsHeader h2 {
+    font-size: 4rem;
+  }
+  section#creations .creationsHeader a {
+    font-size: 1.8rem;
+    padding: 1.2rem 3rem 1rem 3rem;
+  }
+}
+
 /**/
 /**/
 @-webkit-keyframes slideLeft {

@@ -1,15 +1,7 @@
 function animateAndOpen() {
 
-   const menuButton = document.getElementById('menuButton')
-   const navBar = document.querySelector('nav')
+   const headerNavBox = document.querySelector('#headerNavBox')
 
-   if (navBar.classList.contains("onScreen") && menuButton.classList.contains("closeButton")) {
-
-      menuButton.classList.remove('closeButton')
-      navBar.classList.remove('onScreen')
-   } else {
-
-      menuButton.classList.add('closeButton')
-      navBar.classList.add('onScreen')
-   }
+   headerNavBox.classList.contains("onScreen") ? headerNavBox.classList.remove('onScreen') : headerNavBox.classList.add('onScreen');
 }
+

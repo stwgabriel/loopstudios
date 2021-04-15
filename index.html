@@ -2,15 +2,20 @@
 <html lang="en">
 
 <head>
+
    <meta charset="UTF-8">
-   <link rel="stylesheet" href="./src/styles/app.css">
    <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100;200;300&display=swap"
+   <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100;200;250;300;400;500&display=swap"
       rel="stylesheet">
+
+   <link rel="stylesheet" href="src/styles/app.css">
+
    <!--  -->
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!--  -->
+
    <title>Loop Studios | The leader in interactive VR</title>
 </head>
 
@@ -22,37 +27,40 @@
 
       <div class="headerContainer">
 
-         <div class="headerNavBox">
+         <div class="headerNavBox" id="headerNavBox">
 
-            <h1 id="logo"><a href="#"><img src="./public/images/logo.svg" alt="Logo LoopStudio"></a></h1>
+            <div class="screenBox">
+               <h1 id="logo"><a href="#"><img src="./public/images/logo.svg" alt="Logo LoopStudio"></a></h1>
 
-            <button id="menuButton" onclick="animateAndOpen()">
-               <div class="animatedMenu"></div>
-            </button>
+               <button class="closeButton" id="menuButton" onclick="animateAndOpen()">
+                  <div class="animatedMenu" id="animatedMenu"></div>
+               </button>
 
-            <nav id="nav">
+               <nav id="nav">
 
-               <a class="slideLeftAnim " id="navA1" href="#">
-                  <span>About</span>
-                  <div></div>
-               </a>
-               <a class="slideLeftAnim " id="navA2" href="#">
-                  <span>Careers</span>
-                  <div></div>
-               </a>
-               <a class="slideLeftAnim " id="navA3" href="#">
-                  <span>Events</span>
-                  <div></div>
-               </a>
-               <a class="slideLeftAnim " id="navA4" href="#">
-                  <span>Products</span>
-                  <div></div>
-               </a>
-               <a class="slideLeftAnim " id="navA5" href="#">
-                  <span>Support</span>
-                  <div></div>
-               </a>
-            </nav>
+                  <a class="slideLeftAnim " id="navA1" href="#">
+                     <span>About</span>
+                     <div></div>
+                  </a>
+                  <a class="slideLeftAnim " id="navA2" href="#">
+                     <span>Careers</span>
+                     <div></div>
+                  </a>
+                  <a class="slideLeftAnim " id="navA3" href="#">
+                     <span>Events</span>
+                     <div></div>
+                  </a>
+                  <a class="slideLeftAnim " id="navA4" href="#">
+                     <span>Products</span>
+                     <div></div>
+                  </a>
+                  <a class="slideLeftAnim " id="navA5" href="#">
+                     <span>Support</span>
+                     <div></div>
+                  </a>
+               </nav>
+               
+            </div>
 
          </div>
 
@@ -65,6 +73,7 @@
    </header>
 
    <section id="us">
+
       <div class="usBoxOne">
          <img src="./public/images/desktop/image-interactive.jpg" alt="">
       </div>
@@ -76,8 +85,51 @@
             creations have transformed businesses through digital experiences that bind
             to their brand.</p>
       </div>
+
    </section>
-   <section>
+
+   <section id="creations">
+
+      <section class="creationsHeader">
+         <h2>our creations</h2>
+         <a>see all</a>
+      </section>
+
+      <section class="creationsContent">
+
+         <div class="creationBlock deepEarth">
+            <p>Deep earth</p>
+         </div>
+
+         <div class="creationBlock nightArcade">
+            <p>Night arcade</p>
+         </div>
+
+         <div class="creationBlock soccerTeamVR">
+            <p>Soccer team VR</p>
+         </div>
+
+         <div class="creationBlock theGrid">
+            <p>The grid</p>
+         </div>
+
+         <div class="creationBlock fromUpAboveVR">
+            <p>From up above VR</p>
+         </div>
+
+         <div class="creationBlock pocketBorealis">
+            <p>Pocket borealis</p>
+         </div>
+
+         <div class="creationBlock theCuriosity">
+            <p>The curiosity</p>
+         </div>
+
+         <div class="creationBlock makeItFishEye">
+            <p>Make it fisheye</p>
+         </div>
+
+      </section>
 
    </section>
    <footer>
