@@ -30,7 +30,7 @@ header#header {
       max-width: 192rem;
 
       padding: clamp(1rem, 2vw, 8rem);
-      margin: 0 auto;
+      margin : 0 auto;
 
       z-index: 100;
 
@@ -89,44 +89,38 @@ header#header {
 
                z-index: 2000;
 
-               .animatedMenu {
+               &:before {
 
-                  height: 100%;
-                  width : 100%;
+                  content: '';
 
-                  &:before {
+                  background   : #fff;
+                  border-radius: .5rem;
 
-                     content: '';
+                  width : 4rem;
+                  height: .5rem;
 
-                     background   : #fff;
-                     border-radius: .5rem;
+                  position: absolute;
+                  top     : 30%;
+                  left    : 5%;
 
-                     width : 4rem;
-                     height: .5rem;
+                  transition: transform .3s;
+               }
 
-                     position: absolute;
-                     top     : 30%;
-                     left    : 5%;
+               &:after {
 
-                     transition: transform .3s;
-                  }
+                  content: '';
 
-                  &:after {
+                  background   : #fff;
+                  border-radius: .5rem;
 
-                     content: '';
+                  width : 2.5rem;
+                  height: .5rem;
 
-                     background   : #fff;
-                     border-radius: .5rem;
+                  position: absolute;
+                  bottom  : 30%;
+                  left    : 38%;
 
-                     width : 2.5rem;
-                     height: .5rem;
-
-                     position: absolute;
-                     bottom  : 30%;
-                     left    : 38%;
-
-                     transition: .3s;
-                  }
+                  transition: .3s;
                }
             }
          }
@@ -335,24 +329,23 @@ header#header {
                   top     : 2rem;
                   right   : 2.5rem;
 
-                  .animatedMenu {
+                  &:before {
 
-                     &:before {
-
-                        transform: rotate(225deg);
-                        top      : 45%;
-                     }
-
-                     &:after {
-
-                        transform: rotate(315deg);
-
-                        width: 4rem;
-
-                        bottom: 45%;
-                        left  : 4%;
-                     }
+                     transform: rotate(225deg);
+                     top      : 45%;
                   }
+
+                  &:after {
+
+                     transform: rotate(315deg);
+
+                     width: 4rem;
+
+                     bottom: 45%;
+                     left  : 4%;
+                  }
+
+                  .animatedMenu {}
                }
             }
          }

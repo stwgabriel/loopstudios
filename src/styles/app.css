@@ -163,12 +163,7 @@ header#header .headerContainer .headerNavBox .screenBox button#menuButton {
   z-index: 2000;
 }
 
-header#header .headerContainer .headerNavBox .screenBox button#menuButton .animatedMenu {
-  height: 100%;
-  width: 100%;
-}
-
-header#header .headerContainer .headerNavBox .screenBox button#menuButton .animatedMenu:before {
+header#header .headerContainer .headerNavBox .screenBox button#menuButton:before {
   content: '';
   background: #fff;
   border-radius: .5rem;
@@ -183,7 +178,7 @@ header#header .headerContainer .headerNavBox .screenBox button#menuButton .anima
   transition: transform .3s, -webkit-transform .3s;
 }
 
-header#header .headerContainer .headerNavBox .screenBox button#menuButton .animatedMenu:after {
+header#header .headerContainer .headerNavBox .screenBox button#menuButton:after {
   content: '';
   background: #fff;
   border-radius: .5rem;
@@ -355,12 +350,12 @@ header#header .headerContainer .headerTextBox p {
     top: 2rem;
     right: 2.5rem;
   }
-  header#header .headerContainer .onScreen .screenBox button#menuButton .animatedMenu:before {
+  header#header .headerContainer .onScreen .screenBox button#menuButton:before {
     -webkit-transform: rotate(225deg);
             transform: rotate(225deg);
     top: 45%;
   }
-  header#header .headerContainer .onScreen .screenBox button#menuButton .animatedMenu:after {
+  header#header .headerContainer .onScreen .screenBox button#menuButton:after {
     -webkit-transform: rotate(315deg);
             transform: rotate(315deg);
     width: 4rem;
