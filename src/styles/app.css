@@ -14,6 +14,7 @@
 
 a {
   text-decoration: none;
+  padding: .5rem;
 }
 
 h2 {
@@ -49,7 +50,7 @@ main {
 
 /**/
 header#header {
-  background: url(../../public/images/desktop/image-hero.jpg);
+  background: url(../assets/images/desktop/image-hero.jpg);
   background-size: cover;
   background-position: center;
   min-height: 80vh;
@@ -220,6 +221,11 @@ header#header .headerContainer .headerTextBox p {
 }
 
 @media only screen and (max-width: 670px) {
+  header#header {
+    background: url(../assets/images/mobile/image-hero.jpg);
+    background-size: cover;
+    background-position: top;
+  }
   header#header .headerContainer {
     height: 100%;
     width: 100%;
@@ -399,7 +405,7 @@ header#header .headerContainer .headerTextBox p {
 #us .usBoxTwo p {
   color: #696969;
   font-size: 1.8rem;
-  font-size: clamp(1.3rem, 1.5vw, 3rem);
+  font-size: clamp(1.3rem, 1.8vw, 3rem);
   margin-top: 6rem;
 }
 
@@ -550,35 +556,35 @@ section#creations .creationsContent .creationBlock .filterlayer {
 }
 
 section#creations .creationsContent .deepEarth {
-  background-image: url(../../public/images/desktop/image-deep-earth.jpg);
+  background-image: url(../assets/images/desktop/image-deep-earth.jpg);
 }
 
 section#creations .creationsContent .nightArcade {
-  background-image: url(../../public/images/desktop/image-night-arcade.jpg);
+  background-image: url(../assets/images/desktop/image-night-arcade.jpg);
 }
 
 section#creations .creationsContent .soccerTeamVR {
-  background-image: url(../../public/images/desktop/image-soccer-team.jpg);
+  background-image: url(../assets/images/desktop/image-soccer-team.jpg);
 }
 
 section#creations .creationsContent .theGrid {
-  background-image: url(../../public/images/desktop/image-grid.jpg);
+  background-image: url(../assets/images/desktop/image-grid.jpg);
 }
 
 section#creations .creationsContent .fromUpAboveVR {
-  background-image: url(../../public/images/desktop/image-from-above.jpg);
+  background-image: url(../assets/images/desktop/image-from-above.jpg);
 }
 
 section#creations .creationsContent .pocketBorealis {
-  background-image: url(../../public/images/desktop/image-pocket-borealis.jpg);
+  background-image: url(../assets/images/desktop/image-pocket-borealis.jpg);
 }
 
 section#creations .creationsContent .theCuriosity {
-  background-image: url(../../public/images/desktop/image-curiosity.jpg);
+  background-image: url(../assets/images/desktop/image-curiosity.jpg);
 }
 
 section#creations .creationsContent .makeItFishEye {
-  background-image: url(../../public/images/desktop/image-fisheye.jpg);
+  background-image: url(../assets/images/desktop/image-fisheye.jpg);
 }
 
 @media (max-width: 900px) {
@@ -634,28 +640,28 @@ section#creations .creationsContent .makeItFishEye {
     height: clamp(10rem, 45vw, 25rem);
   }
   section#creations .creationsContent .deepEarth {
-    background-image: url(../../public/images/mobile/image-deep-earth.jpg);
+    background-image: url(../assets/images/mobile/image-deep-earth.jpg);
   }
   section#creations .creationsContent .nightArcade {
-    background-image: url(../../public/images/mobile/image-night-arcade.jpg);
+    background-image: url(../assets/images/mobile/image-night-arcade.jpg);
   }
   section#creations .creationsContent .soccerTeamVR {
-    background-image: url(../../public/images/mobile/image-soccer-team.jpg);
+    background-image: url(../assets/images/mobile/image-soccer-team.jpg);
   }
   section#creations .creationsContent .theGrid {
-    background-image: url(../../public/images/mobile/image-grid.jpg);
+    background-image: url(../assets/images/mobile/image-grid.jpg);
   }
   section#creations .creationsContent .fromUpAboveVR {
-    background-image: url(../../public/images/mobile/image-from-above.jpg);
+    background-image: url(../assets/images/mobile/image-from-above.jpg);
   }
   section#creations .creationsContent .pocketBorealis {
-    background-image: url(../../public/images/mobile/image-pocket-borealis.jpg);
+    background-image: url(../assets/images/mobile/image-pocket-borealis.jpg);
   }
   section#creations .creationsContent .theCuriosity {
-    background-image: url(../../public/images/mobile/image-curiosity.jpg);
+    background-image: url(../assets/images/mobile/image-curiosity.jpg);
   }
   section#creations .creationsContent .makeItFishEye {
-    background-image: url(../../public/images/mobile/image-fisheye.jpg);
+    background-image: url(../assets/images/mobile/image-fisheye.jpg);
   }
 }
 
@@ -780,7 +786,12 @@ footer#footer .footerContainer .footerBoxTwo .socialMedias a + a {
 }
 
 footer#footer .footerContainer .footerBoxTwo .socialMedias a {
-  width: 25px;
+  width: 28px;
+  padding: .5rem;
+}
+
+footer#footer .footerContainer .footerBoxTwo .socialMedias a img {
+  width: 100%;
 }
 
 footer#footer .footerContainer .footerBoxTwo span {

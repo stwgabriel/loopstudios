@@ -67,12 +67,13 @@
 a {
 
    text-decoration: none;
+   padding        : .5rem;
 }
 
 h2 {
 
    @include JosefinSansFont;
-   font-size: 4rem;
+   font-size     : 4rem;
    font-size     : clamp(3rem, 5vw, 8rem);
    text-transform: uppercase;
 }

@@ -56,7 +56,12 @@ footer#footer {
             @include MultpleLinks;
 
             a {
-               width: 25px;
+               width: 28px;
+               padding: .5rem;
+
+               img {
+                  width: 100%;
+               }
             }
          }
 
