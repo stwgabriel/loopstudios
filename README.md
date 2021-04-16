@@ -40,7 +40,7 @@ This is a very simple site! In *CSS* I used *Flex Box* in almost everything and 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
+- SCSS Grid
 - Mobile-first workflow
 
 ### Continued development
