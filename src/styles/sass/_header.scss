@@ -29,6 +29,7 @@ header#header {
       width    : 100%;
       max-width: 192rem;
 
+      padding: clamp(1rem, 2vw, 8rem);
       margin: 0 auto;
 
       z-index: 100;
@@ -146,7 +147,7 @@ header#header {
 
          padding: 4rem 2rem;
 
-         transform: translate(clamp(5rem, 5vw, 15rem), clamp(15rem, 20vh, 30rem));
+         transform: translate(clamp(5rem, 5vw, 15rem), clamp(10rem, 15vh, 30rem));
 
          p {
 
@@ -164,7 +165,7 @@ header#header {
 }
 
 //
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
 
    header#header {
 
@@ -175,6 +176,8 @@ header#header {
 
          height: 100%;
          width : 100%;
+
+         padding: 0rem;
 
          .headerNavBox {
 
@@ -316,7 +319,7 @@ header#header {
                   a {
 
                      animation-name     : slideLeft;
-                     animation-duration : .3s;
+                     animation-duration : .2s;
                      animation-fill-mode: backwards;
 
                      span {

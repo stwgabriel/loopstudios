@@ -87,7 +87,9 @@ main {
 
    max-width: 192rem;
    width    : 90%;
-   margin   : 0 auto;
+
+   padding: clamp(1rem, 2vw, 8rem);
+   margin : 0 auto;
 }
 
 @media (min-width: 1650px) {

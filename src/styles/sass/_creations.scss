@@ -63,15 +63,13 @@ section#creations {
 
       width: 100%;
 
-      padding: clamp(2rem, 1vw, 5rem);
-
       .creationBlock {
 
          background-size  : cover;
          background-repeat: no-repeat;
          cursor           : pointer;
 
-         height  : clamp(30rem, 35vw, 70rem);
+         height  : clamp(30rem, 30vw, 70rem);
          position: relative;
          z-index : 10;
 
@@ -156,7 +154,6 @@ section#creations {
       }
    }
 }
-
 
 @media (max-width:900px) {
 

@@ -39,6 +39,7 @@ body {
 main {
   max-width: 192rem;
   width: 90%;
+  padding: clamp(1rem, 2vw, 8rem);
   margin: 0 auto;
 }
 
@@ -77,6 +78,7 @@ header#header .headerContainer {
           flex-direction: column;
   width: 100%;
   max-width: 192rem;
+  padding: clamp(1rem, 2vw, 8rem);
   margin: 0 auto;
   z-index: 100;
 }
@@ -208,8 +210,8 @@ header#header .headerContainer .headerTextBox {
   width: 90%;
   width: clamp(25rem, 60vw, 70rem);
   padding: 4rem 2rem;
-  -webkit-transform: translate(clamp(5rem, 5vw, 15rem), clamp(15rem, 20vh, 30rem));
-          transform: translate(clamp(5rem, 5vw, 15rem), clamp(15rem, 20vh, 30rem));
+  -webkit-transform: translate(clamp(5rem, 5vw, 15rem), clamp(10rem, 15vh, 30rem));
+          transform: translate(clamp(5rem, 5vw, 15rem), clamp(10rem, 15vh, 30rem));
 }
 
 header#header .headerContainer .headerTextBox p {
@@ -220,7 +222,7 @@ header#header .headerContainer .headerTextBox p {
   font-weight: 200;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   header#header {
     background-size: cover;
     background-position: top;
@@ -228,6 +230,7 @@ header#header .headerContainer .headerTextBox p {
   header#header .headerContainer {
     height: 100%;
     width: 100%;
+    padding: 0rem;
   }
   header#header .headerContainer .headerNavBox .screenBox {
     padding: 0;
@@ -339,8 +342,8 @@ header#header .headerContainer .headerTextBox p {
   header#header .headerContainer .onScreen .screenBox #nav a {
     -webkit-animation-name: slideLeft;
             animation-name: slideLeft;
-    -webkit-animation-duration: .3s;
-            animation-duration: .3s;
+    -webkit-animation-duration: .2s;
+            animation-duration: .2s;
     -webkit-animation-fill-mode: backwards;
             animation-fill-mode: backwards;
   }
@@ -505,14 +508,13 @@ section#creations .creationsContent {
   gap: 2rem;
   gap: clamp(2rem, 2vw, 5rem);
   width: 100%;
-  padding: clamp(2rem, 1vw, 5rem);
 }
 
 section#creations .creationsContent .creationBlock {
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
-  height: clamp(30rem, 35vw, 70rem);
+  height: clamp(30rem, 30vw, 70rem);
   position: relative;
   z-index: 10;
 }
@@ -661,7 +663,7 @@ section#creations .creationsContent .makeItFishEye {
 footer#footer {
   background: #000;
   width: 100%;
-  padding: 2rem 0;
+  padding: clamp(1rem, 2vw, 6rem);
 }
 
 footer#footer .footerContainer {
@@ -727,6 +729,10 @@ footer#footer .footerContainer .footerBoxOne .footerLinks a + a {
   margin-left: 1.5rem;
 }
 
+footer#footer .footerContainer .footerBoxOne .footerLinks a {
+  padding: 1rem 0;
+}
+
 footer#footer .footerContainer .footerBoxOne .footerLinks a span {
   font-size: clamp(1.5rem, 1vw, 4rem);
 }
@@ -779,7 +785,7 @@ footer#footer .footerContainer .footerBoxTwo .socialMedias a + a {
 
 footer#footer .footerContainer .footerBoxTwo .socialMedias a {
   width: 28px;
-  padding: .5rem;
+  padding: .5rem 0;
 }
 
 footer#footer .footerContainer .footerBoxTwo .socialMedias a img {
@@ -791,7 +797,7 @@ footer#footer .footerContainer .footerBoxTwo span {
   font-size: 1.3rem;
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 750px) {
   footer#footer * {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -806,6 +812,9 @@ footer#footer .footerContainer .footerBoxTwo span {
   }
   footer#footer .footerContainer .footerBoxOne img {
     margin: 2rem 0;
+  }
+  footer#footer .footerContainer .footerBoxOne .footerLinks a {
+    padding: .5rem;
   }
   footer#footer .footerContainer .footerBoxOne .footerLinks a + a {
     margin: .8rem 0 0 0;
@@ -822,8 +831,8 @@ footer#footer .footerContainer .footerBoxTwo span {
 /**/
 @-webkit-keyframes slideLeft {
   from {
-    -webkit-transform: translateX(100vh);
-            transform: translateX(100vh);
+    -webkit-transform: translateX(150vh);
+            transform: translateX(150vh);
   }
   to {
     -webkit-transform: translateX(0);
@@ -832,8 +841,8 @@ footer#footer .footerContainer .footerBoxTwo span {
 }
 @keyframes slideLeft {
   from {
-    -webkit-transform: translateX(100vh);
-            transform: translateX(100vh);
+    -webkit-transform: translateX(150vh);
+            transform: translateX(150vh);
   }
   to {
     -webkit-transform: translateX(0);
