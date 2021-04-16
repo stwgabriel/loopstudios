@@ -12,7 +12,6 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
   - [Built with](#built-with)
   - [Continued development](#continued-development)
 - [Author](#author)
-- [Social & Profissional](#social-&-profissional)
 
 ## Overview
 
