@@ -38,9 +38,9 @@ This is a very simple site! In *CSS* I used *Flex Box* in almost everything and 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS custom properties
 - Flexbox
-- SCSS Grid
+- Grid
 - Mobile-first workflow
 
 ### Continued development
