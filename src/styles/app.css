@@ -404,7 +404,7 @@ header#header .headerContainer .headerTextBox p {
   margin-top: 6rem;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   #us {
     display: -webkit-box;
     display: -ms-flexbox;
