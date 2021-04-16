@@ -604,7 +604,7 @@ section#creations .creationsContent .makeItFishEye {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  section#creations .creationsHeader h .creationsButton {
+  section#creations .creationsHeader .creationsButton {
     font-size: 1.8rem;
   }
   section#creations .topButton {
