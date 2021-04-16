@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/StwGabriel/loopstudios)
-- Live Site URL: [Solution Preview](stwgabriel.github.io/loopstudios/)
+- Live Site URL: [Solution Preview](https://stwgabriel.github.io/loopstudios/)
 
 ## My process
 
