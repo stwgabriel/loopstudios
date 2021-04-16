@@ -1,3 +1,4 @@
+//
 section#creations {
 
    width: 100%;
@@ -70,7 +71,7 @@ section#creations {
          background-repeat: no-repeat;
          cursor           : pointer;
 
-         height  : clamp(35rem, 25vw, 70rem);
+         height  : clamp(30rem, 35vw, 70rem);
          position: relative;
          z-index : 10;
 
@@ -171,7 +172,7 @@ section#creations {
 
 }
 
-@media only screen and (max-width:670px) {
+@media only screen and (max-width:700px) {
 
 
    section#creations {
