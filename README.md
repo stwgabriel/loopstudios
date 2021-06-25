@@ -51,7 +51,7 @@ I loved developing this website because it gave me a feeling of really working o
 
 - Portfolio - [Gabriel Silva](https://github.com/StwGabriel)
 - Frontend Mentor - [@StwGabriel](https://www.frontendmentor.io/profile/StwGabriel)
-- Other Social Networks - [Click here](https://stwgabriel.github.io/to/)
+- Other Social Networks - [Click here](https://cutt.ly/stwgabriel)
 
 ## Social & Profissional
 
